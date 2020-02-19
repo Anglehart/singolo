@@ -21,7 +21,7 @@ header {
   box-sizing: border-box;
 }
 
-.logo {
+.logo h1{
   font-size: 25px;
   font-weight: 700;
   letter-spacing: -1px;
