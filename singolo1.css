@@ -62,3 +62,74 @@ nav li:before {
 nav li:first-child:before {
   display: none;
 }
+
+.slider {
+  width: 100%;
+  background-color: #f06c64;
+  height: 595px;
+  border-bottom: 5px solid;
+}
+
+.slider-inner {
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.vertical-phone {
+  margin-left: -153px;
+  margin-top: -30px;
+}
+.horizontal-phone {
+
+}
+.vertical-phone .phone-content {
+  position: absolute;
+  height: 333px;
+  width: 188px;
+  background: url("assets/content-vertical.svg");
+  margin-top: 66px;
+  margin-left: 16px;
+  z-index: 2;
+}
+.horizontal-phone .phone-content {
+  position: absolute;
+  height: 188px;
+  width: 333px;
+  background: url("assets/content-horizontal.svg");
+  margin-top: 137px;
+  margin-left: -59px;
+  z-index: 2;
+}
+.vertical-phone .iphone {
+  position: relative;
+  z-index: 1;
+}
+.horizontal-phone .iphone {
+  position: relative;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+.vertical-phone .shadow {
+  transform: scale(1, -1) rotate(90deg);
+  z-index: 0;
+  position: absolute;
+  margin-top: -338px;
+  margin-left: -119px;
+}
+.horizontal-phone .shadow {
+  position: absolute;
+  margin-top: -338px;
+  margin-left: -120px;
+}
+.slider-inner img {
+  display: block;
+}
+.arrow-right img{
+  transform: rotate(180deg);
+}
