@@ -96,11 +96,7 @@ nav li:first-child:before {
   height: 333px;
   width: 188px;
   background: url("assets/content-vertical.svg");
-<<<<<<< HEAD
   background-position: 566px -136px;
-=======
-  background-position: 564px -136px;
->>>>>>> 95a225172c061e72652ec2391d4042b93367e2d6
   margin-top: 66px;
   margin-left: 16px;
   z-index: 2;
