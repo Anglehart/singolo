@@ -31,7 +31,7 @@ header {
 .logo h1{
   font-size: 25px;
   font-weight: 700;
-  letter-spacing: -0.1px;
+  letter-spacing: -0.5px;
 }
 .logo span {
   font-weight: normal;
@@ -82,19 +82,19 @@ nav li:first-child:before {
 .vertical-phone {
   position: relative;
   left: -103px;
-  top: -11px;
+  top: -15px;
 }
 .horizontal-phone {
   position: relative;
-  left: -43px;
-  top: -12px;
+  left: -44px;
+  top: -16px;
 }
 .vertical-phone .phone-content {
   position: absolute;
   height: 333px;
   width: 188px;
   background: url("assets/content-vertical.svg");
-  background-position: 566px -136px;
+  background-position: 566px -135px;
   margin-top: 66px;
   margin-left: 16px;
   z-index: 2;
@@ -104,7 +104,7 @@ nav li:first-child:before {
   height: 189px;
   width: 334px;
   background: url("assets/content-horizontal.svg");
-  background-position: 454px 461px;
+  background-position: 456px 461px;
   margin-top: 137px;
   margin-left: -60px;
   z-index: 2;
@@ -123,7 +123,7 @@ nav li:first-child:before {
   z-index: 0;
   position: absolute;
   margin-top: -338px;
-  margin-left: -118px;
+  margin-left: -119px;
 }
 .horizontal-phone .shadow {
   position: absolute;
@@ -139,6 +139,7 @@ nav li:first-child:before {
 .arrow-right, .arrow-left {
   cursor: pointer;
   opacity: 1;
+  margin-top: -6px; /*pixel perfect only*/
 }
 .arrow-right:hover, .arrow-left:hover{
   opacity: 0.5;
@@ -155,19 +156,29 @@ nav li:first-child:before {
   padding: 59px 40px 0 40px;
   box-sizing: border-box;
 }
-.services-grid {
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 46px;
-}
-.services-grid > div {
+.services-wrapper {
   display: flex;
+  margin-top: 46px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services-item {
+  display: flex;
+  width: 300px;
+  margin-bottom: 22px;
+  overflow: hidden;
 }
 .services-text {
-  margin-left: 25px;
+  margin-left: 18px;
 }
-.pen {
-  display: flex;
+.services-text p{
+  hyphens: auto;
+  text-align: justify;
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-weight: 400;
+  margin: 8px 0;
 }
 .services-inner > p {
   font-size: 18px;
