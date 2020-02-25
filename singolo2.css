@@ -196,9 +196,58 @@ nav li:first-child:before {
 /*Singolo2*/
 .portfolio {
   width: 100%;
-  background-color: #464b5e;
+  background-color: #2d303a;
+  height: 870px;
 }
 .portfolio-inner {
-  width: 1040px;
+  width: 1020px;
   margin: auto;
+  padding: 60px 40px 0 40px;
+  box-sizing: border-box;
+}
+.portfolio h2 {
+  color: #666d89
+}
+.portfolio-inner>p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.tags a {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+  border: 1px solid #767e9e;
+  padding: 2px 6px;
+  text-decoration: none;
+  color: #767e9e;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+.tags a:first-child {
+  margin-left: 1px;
+  margin-right: 5px;
+}
+.tags a:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.portf-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 630px;
+  overflow-y: hidden;
+}
+.portf-image {
+  width: 220px;
+  height: 187px;
+  background-color: #464b5e;
+  margin-top: 20px;
+}
+.portf-image:first-child {
+  background-image: url(assets/portf-image-1.svg);
+  background-position: center;
 }
