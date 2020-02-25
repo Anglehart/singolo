@@ -194,3 +194,11 @@ nav li:first-child:before {
 }
 
 /*Singolo2*/
+.portfolio {
+  width: 100%;
+  background-color: #464b5e;
+}
+.portfolio-inner {
+  width: 1040px;
+  margin: auto;
+}
