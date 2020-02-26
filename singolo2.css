@@ -247,7 +247,3 @@ nav li:first-child:before {
   background-color: #464b5e;
   margin-top: 20px;
 }
-.portf-image:first-child {
-  background-image: url(assets/portf-image-1.svg);
-  background-position: center;
-}
