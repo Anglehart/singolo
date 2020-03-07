@@ -425,3 +425,27 @@ fieldset input:focus, #form-submit:hover {
   background: url("/assets/mail.png") no-repeat;
   background-position-y: 7.5px !important;
 }
+/*Footer*/
+footer {
+  height: 76px;
+  background-color: #2d303a;
+}
+.footer-inner {
+  width: 1020px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.copyright {
+  color: #666d89;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-left: 2.5px;
+  letter-spacing: -0.2px;
+}
+.footer-inner .social a {
+  margin-right: 0px;
+  margin-left: 8px
+}
