@@ -317,3 +317,72 @@ nav li:first-child:before {
 .person:nth-child(2)>img {
   margin-left: -1px
 }
+
+/*Singolo3*/
+.feedback {
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+.feedback-inner {
+  width: 1020px;
+  height: 648px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 60px 40px 0px;
+}
+.feedback h2 {
+  color: #f0d8d9;
+}
+.about {
+  font-size: 18px;
+  line-height: 30px;
+  color: #f0d8d9;
+  letter-spacing: 0px;
+  font-weight: 300;
+  text-align: left;
+}
+.about::first-line {
+  letter-spacing: 0.15px;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#feedback-form {
+  width: 619px;
+}
+.feedback-contact {
+  width: 300px;
+}
+fieldset {
+  margin: 0;
+  margin-top: 26px;
+  padding: 0;
+  border: 0;
+}
+fieldset input {
+  box-sizing: border-box;
+  margin-bottom: 17px;
+  padding: 6px 15px 9px;
+  border: 0;
+  width: 100%;
+  font-size: 12px;
+  line-height: 22px;
+  color: #f0d8d9;
+  font-weight: 300;
+  text-align: left;
+  border-radius: 5px;
+  background-color:  #d6564f;
+  letter-spacing: -0.2px;
+}
+#form-message {
+  padding-bottom: 172px
+}
+#form-submit {
+  width: auto;
+  cursor: pointer;
+}
+#form-submit:hover {
+  background-color:  #ae453f;
+  color: #ececec;
+}
