@@ -464,3 +464,10 @@ footer {
   width: 100%;
   box-sizing: border-box;
 }
+.menu-active {
+  color: #f06c64;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
