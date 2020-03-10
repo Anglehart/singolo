@@ -170,6 +170,7 @@ nav li:first-child:before {
 }
 .services-text {
   margin-left: 18px;
+  max-height: 97px;
 }
 .services-text p{
   hyphens: auto;
