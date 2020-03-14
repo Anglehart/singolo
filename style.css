@@ -65,24 +65,20 @@ nav li:first-child:before {
   border-bottom: 5px solid #ea676b;
 }
 .slider-inner {
-  width: 1020px;
+  width: 940px;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
-  padding: 0 40px;
-  box-sizing: border-box;
+  position: relative;
 }
 .vertical-phone {
   position: relative;
-  left: -103px;
-  top: -15px;
+  left: -56px;
+  top: 52px;
 }
 .horizontal-phone {
   position: relative;
-  left: -44px;
-  top: -16px;
+  left: -92px;
+  top: 51px;
 }
 #phone-content-v {
   position: absolute;
@@ -138,10 +134,17 @@ nav li:first-child:before {
 .arrow-right, .arrow-left {
   cursor: pointer;
   opacity: 1;
-  margin-top: -6px; /*pixel perfect only*/
+  position: absolute;
+  top: 281px;
 }
 .arrow-right:hover, .arrow-left:hover{
   opacity: 0.5;
+}
+.arrow-left {
+  margin-left: 2px;
+}
+.arrow-right {
+  right: 0px;
 }
 .services {
   width: 100%;
@@ -476,4 +479,11 @@ nav li a:hover {
 }
 .hidden {
   opacity: 0;
+}
+#first-slider {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
