@@ -72,10 +72,19 @@ function mixPicture(){
   Array.from(TAGS.getElementsByClassName('tag')).forEach(el => el.classList.remove('tag-active'));
   event.target.classList.add('tag-active');
   /*Перемешивание картинок*/
-  Array.from(IMAGES.getElementsByClassName('portf-image')).forEach(el => el.style.order = '1');
+  Array.from(IMAGES.getElementsByClassName('portf-image')).forEach(el => el.style.order = getRandom(1, 12));
   for (let i=0; i<PIC_TYPE.length; i++){
     if (event.target.id == PIC_TYPE[i]){
       document.querySelectorAll('[data-type=' + PIC_TYPE[i] + ']').forEach(el => el.style.order = '0');
     }
   }
+}
+/*
+В ТЗ написано, что картинка не должна оставаться на своем месте, поэтому добавляю рандомизатор порядка картинок.
+Можно вместо вызова функции просто написать "1" и будет более логично и правильно, не не совсем по ТЗ.
+*/
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
