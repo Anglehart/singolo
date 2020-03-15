@@ -5,10 +5,11 @@ const PHONEH = document.getElementById('phone-content-h');
 const CLOSE_BUTTON = document.getElementById('form-close');
 const SUBJECT = document.getElementById('message-subject');
 const PROJECT = document.getElementById('message-project');
+const TAGS = document.getElementById('tags');
 let vTrigger = true;
 let hTrigger = true;
 
-/*Добавление рамки к вартинкам*/
+/*Добавление рамки к картинкам*/
 IMAGES.addEventListener('click', (event) => {
   IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('image-active'));
   event.target.classList.add('image-active');
@@ -21,23 +22,21 @@ MENU.addEventListener('click', (event) => {
   MENU.querySelectorAll('li').forEach(el => el.classList.remove('menu-active'));
 })
 /*Включиение и выключение вертикального айфона*/
-document.getElementById('iphone-v').addEventListener('click', (event) => {
-  if (vTrigger == true){
-    PHONEV.classList.add('hidden');
-    vTrigger = false;
-  } else {
+
+
+document.getElementById('iphone-v').addEventListener('click', () => {
+  if (PHONEV.classList.contains('hidden')){
     PHONEV.classList.remove('hidden');
-    vTrigger = true;
+  } else {
+    PHONEV.classList.add('hidden');
   }
 })
 /*Включиение и выключение горизонтального айфона*/
-document.getElementById('iphone-h').addEventListener('click', (event) => {
-  if (hTrigger == true){
-    PHONEH.classList.add('hidden');
-    hTrigger = false;
-  } else {
+document.getElementById('iphone-h').addEventListener('click', () => {
+  if (PHONEH.classList.contains('hidden')){
     PHONEH.classList.remove('hidden');
-    hTrigger = true;
+  } else {
+    PHONEH.classList.add('hidden');
   }
 })
 /*Всплывающее сообщение формы*/
@@ -52,10 +51,12 @@ function formMessage(){
   } else {
     PROJECT.innerHTML = 'Описание: ' + document.getElementById('form-project').value;
   }
-  
+
   document.getElementById('message-block').classList.remove('disable');
-  let mesWidth = (screen.width - document.getElementById("message").clientWidth)/2;
+  let mesWidth = (document.documentElement.clientWidth - document.getElementById("message").clientWidth)/2;
+  let mesHeight = (document.documentElement.clientHeight - document.getElementById("message").clientHeight)/2;
   document.getElementById('message').style.left = mesWidth + "px";
+  document.getElementById('message').style.top = mesHeight + "px";
 
   CLOSE_BUTTON.addEventListener('click', () => {
     SUBJECT.innerHTML = '';
@@ -63,4 +64,9 @@ function formMessage(){
     document.getElementById('message-block').classList.add('disable');
     document.getElementById('feedback-form').reset();
   })
+}
+/*Активация тэгов картинок*/
+function mixPicture(){
+  Array.from(TAGS.getElementsByClassName('tag')).forEach(el => el.classList.remove('tag-active'));
+  event.target.classList.add('tag-active');
 }

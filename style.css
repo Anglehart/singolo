@@ -219,7 +219,10 @@ nav li:first-child:before {
   font-weight: 300;
   margin-bottom: 10px;
 }
-.tags a {
+#tags {
+  display: flex;
+}
+.tag {
   font-size: 12px;
   line-height: 22px;
   font-weight: 400;
@@ -229,12 +232,13 @@ nav li:first-child:before {
   color: #767e9e;
   border-radius: 5px;
   margin: 0 3px;
+  cursor: pointer;
 }
-.tags a:first-child {
+.tag:first-child {
   margin-left: 1px;
   margin-right: 5px;
 }
-.tags a:hover {
+.tag:hover, .tag-active {
   border-color: #ffffff;
   color: #ffffff;
 }
@@ -506,7 +510,6 @@ nav li a:hover {
 }
 #message {
   position: absolute;
-  top: 50%;
   border: 2px solid black;
   text-align: center;
   background-color: #f06c64;

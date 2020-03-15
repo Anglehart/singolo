@@ -32,18 +32,18 @@
         <div id="first-slider">
           <div class="vertical-phone">
             <div id="phone-content-v"></div>
-            <img id="iphone-v" src="assets/iphone.svg">
+            <img id="iphone-v" class="iphone" src="assets/iphone.svg">
             <img class="shadow" src="assets/shadow.svg">
           </div>
           <div class="horizontal-phone">
             <div id="phone-content-h"></div>
-            <img id="iphone-h" src="assets/iphone.svg">
+            <img id="iphone-h" class="iphone" src="assets/iphone.svg">
             <img class="shadow" src="assets/shadow.svg">
           </div>
         </div>
-        <!--<div id="second-slide">
+        <div id="second-slide" class="disable">
             <img src="assets/slide2.svg" alt="">
-        </div>-->
+        </div>
         <div class="arrow-left">
           <img src="assets/arrow.svg">
         </div>
@@ -108,11 +108,11 @@
     <div class="portfolio-inner">
       <h2>Portfolio</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-      <div class="tags">
-        <a href="#">All</a>
-        <a href="#">Web Design</a>
-        <a href="#">Graphic Design</a>
-        <a href="#">Artwork</a>
+      <div id="tags">
+        <div class="tag" onclick="mixPicture()">All</div>
+        <div class="tag" onclick="mixPicture()">Web Design</div>
+        <div class="tag" onclick="mixPicture()">Graphic Design</div>
+        <div class="tag" onclick="mixPicture()">Artwork</div>
       </div>
       <div id="portf-images">
         <div class="portf-image"><img src="assets/portf-image-1.png"></div>
