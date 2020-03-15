@@ -7,24 +7,20 @@ const SUBJECT = document.getElementById('message-subject');
 const PROJECT = document.getElementById('message-project');
 const TAGS = document.getElementById('tags');
 const PIC_TYPE = ['all','wdesign', 'gdesign', 'artwork'];
-let vTrigger = true;
-let hTrigger = true;
 
 /*Добавление рамки к картинкам*/
-IMAGES.addEventListener('click', (event) => {
+IMAGES.querySelectorAll('img').forEach(el => el.addEventListener('click', () => {
   IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('image-active'));
   event.target.classList.add('image-active');
-  IMAGES.classList.remove('image-active');
-})
+}))
+
 /*Активация элементов меню*/
-MENU.addEventListener('click', (event) => {
+MENU.querySelectorAll('a').forEach(el => el.addEventListener('click', () => {
   MENU.querySelectorAll('a').forEach(el => el.classList.remove('menu-active'));
   event.target.classList.add('menu-active');
-  MENU.querySelectorAll('li').forEach(el => el.classList.remove('menu-active'));
-})
+}))
+
 /*Включиение и выключение вертикального айфона*/
-
-
 document.getElementById('iphone-v').addEventListener('click', () => {
   if (PHONEV.classList.contains('hidden')){
     PHONEV.classList.remove('hidden');
@@ -32,6 +28,7 @@ document.getElementById('iphone-v').addEventListener('click', () => {
     PHONEV.classList.add('hidden');
   }
 })
+
 /*Включиение и выключение горизонтального айфона*/
 document.getElementById('iphone-h').addEventListener('click', () => {
   if (PHONEH.classList.contains('hidden')){
@@ -40,6 +37,7 @@ document.getElementById('iphone-h').addEventListener('click', () => {
     PHONEH.classList.add('hidden');
   }
 })
+
 /*Всплывающее сообщение формы*/
 function formMessage(){
   if (document.getElementById('form-subject').value == ''){
@@ -79,10 +77,8 @@ function mixPicture(){
     }
   }
 }
-/*
-В ТЗ написано, что картинка не должна оставаться на своем месте, поэтому добавляю рандомизатор порядка картинок.
-Можно вместо вызова функции просто написать "1" и будет более логично и правильно, не не совсем по ТЗ.
-*/
+
+/*Функция для рандомизации порядка картинок*/
 function getRandom(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
