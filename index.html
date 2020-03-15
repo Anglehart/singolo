@@ -10,7 +10,6 @@
 </head>
 <body>
   <header>
-    <a name="home"></a>
     <div class="header-inner">
       <div class="logo">
         <h1>SINGOLO<span>*</span></h1>
@@ -27,20 +26,26 @@
     </div>
   </header>
   <main>
+    <a name="home" class="anchor"></a>
     <section class="slider">
       <div class="slider-inner">
+        <div id="first-slider">
+          <div class="vertical-phone">
+            <div id="phone-content-v"></div>
+            <img id="iphone-v" class="iphone" src="assets/iphone.svg">
+            <img class="shadow" src="assets/shadow.svg">
+          </div>
+          <div class="horizontal-phone">
+            <div id="phone-content-h"></div>
+            <img id="iphone-h" class="iphone" src="assets/iphone.svg">
+            <img class="shadow" src="assets/shadow.svg">
+          </div>
+        </div>
+        <div id="second-slide" class="disable">
+            <img src="assets/slide2.svg" alt="">
+        </div>
         <div class="arrow-left">
           <img src="assets/arrow.svg">
-        </div>
-        <div class="vertical-phone">
-          <div class="phone-content"></div>
-          <img class="iphone" src="assets/iphone.svg">
-          <img class="shadow" src="assets/shadow.svg">
-        </div>
-        <div class="horizontal-phone">
-          <div class="phone-content"></div>
-          <img class="iphone" src="assets/iphone.svg">
-          <img class="shadow" src="assets/shadow.svg">
         </div>
         <div class="arrow-right">
           <img src="assets/arrow.svg">
@@ -48,7 +53,7 @@
       </div>
     </section>
     <section class="services">
-      <a name="services"></a>
+      <a name="services" class="anchor"></a>
       <div class="services-inner">
         <h2>Our Services</h2>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -99,34 +104,34 @@
       </div>
     </section>
   <section class="portfolio">
-    <a name="portfolio"></a>
+    <a name="portfolio" class="anchor"></a>
     <div class="portfolio-inner">
       <h2>Portfolio</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-      <div class="tags">
-        <a href="#">All</a>
-        <a href="#">Web Design</a>
-        <a href="#">Graphic Design</a>
-        <a href="#">Artwork</a>
+      <div id="tags">
+        <div class="tag" onclick="mixPicture()" id="all">All</div>
+        <div class="tag" onclick="mixPicture()" id="wdesign">Web Design</div>
+        <div class="tag" onclick="mixPicture()" id="gdesign">Graphic Design</div>
+        <div class="tag" onclick="mixPicture()" id="artwork">Artwork</div>
       </div>
       <div id="portf-images">
-        <div class="portf-image"><img src="assets/portf-image-1.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-2.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-3.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-4.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-5.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-6.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-7.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-8.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-9.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-10.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-11.png"></div>
-        <div class="portf-image"><img src="assets/portf-image-12.png"></div>
+        <div class="portf-image" data-type="wdesign"><img src="assets/portf-image-1.png"></div>
+        <div class="portf-image" data-type="gdesign"><img src="assets/portf-image-2.png"></div>
+        <div class="portf-image" data-type="artwork"><img src="assets/portf-image-3.png"></div>
+        <div class="portf-image" data-type="wdesign"><img src="assets/portf-image-4.png"></div>
+        <div class="portf-image" data-type="gdesign"><img src="assets/portf-image-5.png"></div>
+        <div class="portf-image" data-type="artwork"><img src="assets/portf-image-6.png"></div>
+        <div class="portf-image" data-type="wdesign"><img src="assets/portf-image-7.png"></div>
+        <div class="portf-image" data-type="gdesign"><img src="assets/portf-image-8.png"></div>
+        <div class="portf-image" data-type="artwork"><img src="assets/portf-image-9.png"></div>
+        <div class="portf-image" data-type="wdesign"><img src="assets/portf-image-10.png"></div>
+        <div class="portf-image" data-type="gdesign"><img src="assets/portf-image-11.png"></div>
+        <div class="portf-image" data-type="artwork"><img src="assets/portf-image-12.png"></div>
       </div>
     </div>
   </section>
   <section class="about-us">
-    <a name="about"></a>
+    <a name="about" class="anchor"></a>
     <div class="about-us-inner">
       <h2>About Us</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -168,20 +173,28 @@
     </div>
   </section>
   <section class="feedback">
-    <a name="contact"></a>
+    <a name="contact" class="anchor"></a>
     <div class="feedback-inner">
       <h2>Get a Quote</h2>
       <p class="about">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="form-wrapper">
-          <form id="feedback-form" action="#">
+          <form id="feedback-form" action="#" onsubmit="formMessage(); return false">
             <fieldset>
-            <input type="text" id="form-name" placeholder="Name (Required)" required>
-            <input type="email" id="form-email" placeholder="Email (Required)" required>
-            <input type="text" id="form-subject" placeholder="Subject">
-            <input type="textarea" id="form-message" placeholder="Describe your project in detail...">
-            <input type="submit" id="form-submit" value="Sumbit">
+            <input type="text" name="form-name" id="form-name" placeholder="Name (Required)" required>
+            <input type="email" name="form-email" id="form-email" placeholder="Email (Required)" required>
+            <input type="text" name="form-subject" id="form-subject" placeholder="Subject">
+            <textarea type="textarea" rows="8" cols="30" name="form-project" id="form-project" placeholder="Describe your project in detail..."></textarea>
+            <input type="submit" name="form-submit" id="form-submit" value="SEND" >
             </fieldset>
           </form>
+          <div id="message-block" class="disable">
+            <div id="message">
+              <p>Письмо отправлено</p>
+              <p id="message-subject"></p>
+              <p id="message-project"></p>
+              <button id="form-close">OK</button>
+            </div>
+          </div>
         <div class="feedback-contact">
           <h3>Contact Information</h3>
           <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
