@@ -72,11 +72,10 @@ function mixPicture(){
   Array.from(TAGS.getElementsByClassName('tag')).forEach(el => el.classList.remove('tag-active'));
   event.target.classList.add('tag-active');
   /*Перемешивание картинок*/
-  Array.from(document.getElementsByClassName('portf-image')).forEach(el => el.style.order = '1');
+  Array.from(IMAGES.getElementsByClassName('portf-image')).forEach(el => el.style.order = '1');
   for (let i=0; i<PIC_TYPE.length; i++){
     if (event.target.id == PIC_TYPE[i]){
-      let dataSelector = '[data-type=' + PIC_TYPE[i] + ']';
-      document.querySelectorAll(dataSelector).forEach(el => el.style.order = '0');
+      document.querySelectorAll('[data-type=' + PIC_TYPE[i] + ']').forEach(el => el.style.order = '0');
     }
   }
 }
