@@ -522,3 +522,6 @@ nav li a:hover {
 .disable {
   display: none;
 }
+.portf-image {
+  order: 1;
+}

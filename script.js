@@ -6,6 +6,7 @@ const CLOSE_BUTTON = document.getElementById('form-close');
 const SUBJECT = document.getElementById('message-subject');
 const PROJECT = document.getElementById('message-project');
 const TAGS = document.getElementById('tags');
+const PIC_TYPE = ['all','wdesign', 'gdesign', 'artwork'];
 let vTrigger = true;
 let hTrigger = true;
 
@@ -65,8 +66,17 @@ function formMessage(){
     document.getElementById('feedback-form').reset();
   })
 }
-/*Активация тэгов картинок*/
+
 function mixPicture(){
+  /*Активация тэгов картинок*/
   Array.from(TAGS.getElementsByClassName('tag')).forEach(el => el.classList.remove('tag-active'));
   event.target.classList.add('tag-active');
+  /*Перемешивание картинок*/
+  Array.from(document.getElementsByClassName('portf-image')).forEach(el => el.style.order = '1');
+  for (let i=0; i<PIC_TYPE.length; i++){
+    if (event.target.id == PIC_TYPE[i]){
+      let dataSelector = '[data-type=' + PIC_TYPE[i] + ']';
+      document.querySelectorAll(dataSelector).forEach(el => el.style.order = '0');
+    }
+  }
 }
