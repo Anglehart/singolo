@@ -178,15 +178,23 @@
       <h2>Get a Quote</h2>
       <p class="about">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="form-wrapper">
-          <form id="feedback-form" action="#">
+          <form id="feedback-form" action="#" onsubmit="formMessage(); return false">
             <fieldset>
-            <input type="text" id="form-name" placeholder="Name (Required)" required>
-            <input type="email" id="form-email" placeholder="Email (Required)" required>
-            <input type="text" id="form-subject" placeholder="Subject">
-            <input type="textarea" id="form-message" placeholder="Describe your project in detail...">
-            <input type="submit" id="form-submit" value="Sumbit">
+            <input type="text" name="form-name" id="form-name" placeholder="Name (Required)" required>
+            <input type="email" name="form-email" id="form-email" placeholder="Email (Required)" required>
+            <input type="text" name="form-subject" id="form-subject" placeholder="Subject">
+            <textarea type="textarea" rows="8" cols="30" name="form-project" id="form-project" placeholder="Describe your project in detail..."></textarea>
+            <input type="submit" name="form-submit" id="form-submit" value="SEND" >
             </fieldset>
           </form>
+          <div id="message-block" class="disable">
+            <div id="message">
+              <p>Письмо отправлено</p>
+              <p id="message-subject"></p>
+              <p id="message-project"></p>
+              <button id="form-close">OK</button>
+            </div>
+          </div>
         <div class="feedback-contact">
           <h3>Contact Information</h3>
           <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>

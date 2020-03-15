@@ -371,7 +371,7 @@ fieldset {
   padding: 0;
   border: 0;
 }
-fieldset input {
+fieldset input, #form-project {
   box-sizing: border-box;
   margin-bottom: 17px;
   padding: 6px 15px 9px;
@@ -385,17 +385,26 @@ fieldset input {
   border-radius: 5px;
   background-color:  #d6564f;
   letter-spacing: -0.2px;
+  font-family: inherit;
 }
 fieldset input:focus, #form-submit:hover {
   background-color:  #ae453f;
   color: #ffffff;
 }
-#form-message {
-  padding-bottom: 172px
-}
-#form-submit {
-  width: auto;
+
+#form-submit, #form-close {
   cursor: pointer;
+  background: #FBC65F;
+  border-radius: 5px;
+  width: 136px;
+  height: 38px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #886A30;
+  font-family: inherit;
+  border: none;
 }
 .feedback-contact h3 {
   font-size: 18px;
@@ -486,4 +495,27 @@ nav li a:hover {
   width: 100%;
   height: 100%;
   position: absolute;
+}
+#message-block {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: #0008;
+}
+#message {
+  position: absolute;
+  top: 50%;
+  border: 2px solid black;
+  text-align: center;
+  background-color: #f06c64;
+  color: #fff;
+  min-width: 300px;
+  max-width: 800px;
+  word-wrap: break-word;
+  padding: 10px;
+}
+.disable {
+  display: none;
 }
