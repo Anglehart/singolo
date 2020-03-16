@@ -89,7 +89,7 @@ function getRandom(min, max) {
 
 /*Движениe слайдеров*/
 RARROW.addEventListener('click', () => {
-  document.getElementById('arrow-right').style.pointerEvents = 'none';
+
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
@@ -103,17 +103,15 @@ RARROW.addEventListener('click', () => {
     document.getElementById(active).classList.add('hidden-slide');
     document.getElementById(active).classList.remove('hidden-right');
     document.getElementById('arrow-right').style.pointerEvents='';},
-  490);
+  400);
   document.getElementById(hidden).classList.add('hidden-left');
   document.getElementById(hidden).classList.remove('hidden-slide');
   setTimeout(function(){
     document.getElementById(hidden).classList.remove('hidden-left');
     document.getElementById(hidden).classList.add('active-slide')},
-  10);
-  document.getElementById('arrow-right').style.pointerEvents = '';
+  100);
 })
 LARROW.addEventListener('click', () => {
-  document.getElementById('arrow-left').style.pointerEvents = 'none';
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
@@ -127,12 +125,11 @@ LARROW.addEventListener('click', () => {
     document.getElementById(active).classList.add('hidden-slide');
     document.getElementById(active).classList.remove('hidden-left');
     document.getElementById('arrow-left').style.pointerEvents='';},
-  490);
+  400);
   document.getElementById(hidden).classList.add('hidden-right');
   document.getElementById(hidden).classList.remove('hidden-slide');
   setTimeout(function(){
     document.getElementById(hidden).classList.remove('hidden-right');
     document.getElementById(hidden).classList.add('active-slide')},
-  10);
-  document.getElementById('arrow-left').style.pointerEvents = '';
+  100);
 })
