@@ -89,13 +89,12 @@ function getRandom(min, max) {
 
 /*Движениe слайдеров*/
 RARROW.addEventListener('click', () => {
-
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
-    document.getElementById('slider').style.backgroundColor = '#648bf0';
+    document.getElementById('slider').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
   } else {
-    document.getElementById('slider').style.backgroundColor = '';
+    document.getElementById('slider').style.cssText = 'border-color: 0; background-color: 0';
   }
   document.getElementById(active).classList.add('hidden-right');
   document.getElementById(active).classList.remove('active-slide');
@@ -111,13 +110,14 @@ RARROW.addEventListener('click', () => {
     document.getElementById(hidden).classList.add('active-slide')},
   100);
 })
+
 LARROW.addEventListener('click', () => {
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
-    document.getElementById('slider').style.backgroundColor = '#648bf0';
+    document.getElementById('slider').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
   } else {
-    document.getElementById('slider').style.backgroundColor = '';
+    document.getElementById('slider').style.cssText = 'border-color: 0; background-color: 0';
   }
   document.getElementById(active).classList.add('hidden-left');
   document.getElementById(active).classList.remove('active-slide');

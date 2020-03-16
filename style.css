@@ -410,6 +410,12 @@ fieldset input:focus, #form-submit:hover {
   background-color:  #ae453f;
   color: #ffffff;
 }
+#form-project::placeholder, fieldset input::placeholder {
+  color: #f48c8f;
+}
+#form-project {
+  padding-bottom: 1px;
+}
 
 #form-submit, #form-close {
   cursor: pointer;
