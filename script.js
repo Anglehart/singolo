@@ -7,6 +7,8 @@ const SUBJECT = document.getElementById('message-subject');
 const PROJECT = document.getElementById('message-project');
 const TAGS = document.getElementById('tags');
 const PIC_TYPE = ['all','wdesign', 'gdesign', 'artwork'];
+const RARROW = document.getElementById('arrow-right');
+const LARROW = document.getElementById('arrow-left');
 
 /*Добавление рамки к картинкам*/
 IMAGES.querySelectorAll('img').forEach(el => el.addEventListener('click', () => {
@@ -84,3 +86,50 @@ function getRandom(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+/*Движениe слайдеров*/
+RARROW.addEventListener('click', () => {
+
+  let hidden = document.getElementsByClassName('hidden-slide')[0].id;
+  let active = document.getElementsByClassName('active-slide')[0].id;
+  if (active == 'first-slide'){
+    document.getElementById('slider').style.backgroundColor = '#648bf0';
+  } else {
+    document.getElementById('slider').style.backgroundColor = '';
+  }
+  document.getElementById(active).classList.add('hidden-right');
+  document.getElementById(active).classList.remove('active-slide');
+  setTimeout(function(){
+    document.getElementById(active).classList.add('hidden-slide');
+    document.getElementById(active).classList.remove('hidden-right');
+    document.getElementById('arrow-right').style.pointerEvents='';},
+  400);
+  document.getElementById(hidden).classList.add('hidden-left');
+  document.getElementById(hidden).classList.remove('hidden-slide');
+  setTimeout(function(){
+    document.getElementById(hidden).classList.remove('hidden-left');
+    document.getElementById(hidden).classList.add('active-slide')},
+  100);
+})
+LARROW.addEventListener('click', () => {
+  let hidden = document.getElementsByClassName('hidden-slide')[0].id;
+  let active = document.getElementsByClassName('active-slide')[0].id;
+  if (active == 'first-slide'){
+    document.getElementById('slider').style.backgroundColor = '#648bf0';
+  } else {
+    document.getElementById('slider').style.backgroundColor = '';
+  }
+  document.getElementById(active).classList.add('hidden-left');
+  document.getElementById(active).classList.remove('active-slide');
+  setTimeout(function(){
+    document.getElementById(active).classList.add('hidden-slide');
+    document.getElementById(active).classList.remove('hidden-left');
+    document.getElementById('arrow-left').style.pointerEvents='';},
+  400);
+  document.getElementById(hidden).classList.add('hidden-right');
+  document.getElementById(hidden).classList.remove('hidden-slide');
+  setTimeout(function(){
+    document.getElementById(hidden).classList.remove('hidden-right');
+    document.getElementById(hidden).classList.add('active-slide')},
+  100);
+})
