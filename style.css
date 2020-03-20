@@ -261,6 +261,9 @@ nav li:first-child:before {
   border-color: #ffffff;
   color: #ffffff;
 }
+.tag-active {
+  pointer-events: none;
+}
 #portf-images {
   display: flex;
   flex-wrap: wrap;
@@ -551,9 +554,6 @@ nav li a:hover {
 }
 .disable {
   display: none;
-}
-.portf-image {
-  order: 1;
 }
 .hidden-left {
   left: -1020px;
