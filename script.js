@@ -16,11 +16,25 @@ IMAGES.querySelectorAll('img').forEach(el => el.addEventListener('click', () => 
   event.target.classList.add('image-active');
 }))
 
-/*Активация элементов меню*/
-MENU.querySelectorAll('a').forEach(el => el.addEventListener('click', () => {
-  MENU.querySelectorAll('a').forEach(el => el.classList.remove('menu-active'));
-  event.target.classList.add('menu-active');
-}))
+/*Активация элементов меню при прокрутке*/
+document.addEventListener('scroll', onScroll);
+
+function onScroll(){
+  const curPos = window.scrollY + 95;
+  const sections = document.querySelectorAll('section');
+  const links = document.querySelectorAll('#menu a');
+
+  sections.forEach((el) => {
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      links.forEach((item) => {
+        item.classList.remove('menu-active');
+        if (el.getAttribute('id') === item.getAttribute('href').substring(1) + '-sec' ){
+          item.classList.add('menu-active');
+        }
+      });
+    }
+  });
+}
 
 /*Включиение и выключение вертикального айфона*/
 document.getElementById('iphone-v').addEventListener('click', () => {
@@ -92,9 +106,9 @@ RARROW.addEventListener('click', () => {
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
-    document.getElementById('slider').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
+    document.getElementById('home-sec').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
   } else {
-    document.getElementById('slider').style.cssText = 'border-color: 0; background-color: 0';
+    document.getElementById('home-sec').style.cssText = 'border-color: 0; background-color: 0';
   }
   document.getElementById(active).classList.add('hidden-right');
   document.getElementById(active).classList.remove('active-slide');
@@ -115,9 +129,9 @@ LARROW.addEventListener('click', () => {
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
-    document.getElementById('slider').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
+    document.getElementById('home-sec').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
   } else {
-    document.getElementById('slider').style.cssText = 'border-color: 0; background-color: 0';
+    document.getElementById('home-sec').style.cssText = 'border-color: 0; background-color: 0';
   }
   document.getElementById(active).classList.add('hidden-left');
   document.getElementById(active).classList.remove('active-slide');
