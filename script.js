@@ -16,6 +16,12 @@ IMAGES.querySelectorAll('img').forEach(el => el.addEventListener('click', () => 
   event.target.classList.add('image-active');
 }))
 
+/*Активация элементов меню*/
+MENU.querySelectorAll('a').forEach(el => el.addEventListener('click', () => {
+  MENU.querySelectorAll('a').forEach(el => el.classList.remove('menu-active'));
+  event.target.classList.add('menu-active');
+}))
+
 /*Активация элементов меню при прокрутке*/
 document.addEventListener('scroll', onScroll);
 
@@ -31,9 +37,13 @@ function onScroll(){
         if (el.getAttribute('id') === item.getAttribute('href').substring(1) + '-sec' ){
           item.classList.add('menu-active');
         }
+        if(window.scrollY+1 >= document.documentElement.scrollHeight-document.documentElement.clientHeight) {
+          item.classList.remove('menu-active');
+          document.getElementById('last-child-li').classList.add('menu-active');
+        };
       });
-    }
-  });
+    }}
+  )
 }
 
 /*Включиение и выключение вертикального айфона*/
