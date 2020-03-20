@@ -16,11 +16,25 @@ IMAGES.querySelectorAll('img').forEach(el => el.addEventListener('click', () => 
   event.target.classList.add('image-active');
 }))
 
-/*Активация элементов меню*/
-MENU.querySelectorAll('a').forEach(el => el.addEventListener('click', () => {
-  MENU.querySelectorAll('a').forEach(el => el.classList.remove('menu-active'));
-  event.target.classList.add('menu-active');
-}))
+/*Активация элементов меню при прокрутке*/
+document.addEventListener('scroll', onScroll);
+
+function onScroll(){
+  const curPos = window.scrollY + 95;
+  const sections = document.querySelectorAll('section');
+  const links = document.querySelectorAll('#menu a');
+
+  sections.forEach((el) => {
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      links.forEach((item) => {
+        item.classList.remove('menu-active');
+        if (el.getAttribute('id') === item.getAttribute('href').substring(1) + '-sec' ){
+          item.classList.add('menu-active');
+        }
+      });
+    }
+  });
+}
 
 /*Включиение и выключение вертикального айфона*/
 document.getElementById('iphone-v').addEventListener('click', () => {
@@ -72,19 +86,25 @@ function mixPicture(){
   Array.from(TAGS.getElementsByClassName('tag')).forEach(el => el.classList.remove('tag-active'));
   event.target.classList.add('tag-active');
   /*Перемешивание картинок*/
-  Array.from(IMAGES.getElementsByClassName('portf-image')).forEach(el => el.style.order = getRandom(1, 12));
-  for (let i=0; i<PIC_TYPE.length; i++){
-    if (event.target.id == PIC_TYPE[i]){
-      document.querySelectorAll('[data-type=' + PIC_TYPE[i] + ']').forEach(el => el.style.order = '0');
-    }
-  }
+  let allImages = shuffle(Array.from(IMAGES.children));
+  Array.from(IMAGES.children).forEach((item) => {
+    item.remove();
+  });
+  allImages.forEach((item) => {
+    IMAGES.append(item);
+  });
 }
 
 /*Функция для рандомизации порядка картинок*/
-function getRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function shuffle(arr) {
+  var j, temp;
+  for(var i = arr.length - 1; i > 0; i--){
+    j = Math.floor(Math.random()*(i + 1));
+    temp = arr[j];
+    arr[j] = arr[i];
+    arr[i] = temp;
+  }
+  return arr;
 }
 
 /*Движениe слайдеров*/
@@ -92,9 +112,9 @@ RARROW.addEventListener('click', () => {
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
-    document.getElementById('slider').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
+    document.getElementById('home-sec').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
   } else {
-    document.getElementById('slider').style.cssText = 'border-color: 0; background-color: 0';
+    document.getElementById('home-sec').style.cssText = 'border-color: 0; background-color: 0';
   }
   document.getElementById(active).classList.add('hidden-right');
   document.getElementById(active).classList.remove('active-slide');
@@ -115,9 +135,9 @@ LARROW.addEventListener('click', () => {
   let hidden = document.getElementsByClassName('hidden-slide')[0].id;
   let active = document.getElementsByClassName('active-slide')[0].id;
   if (active == 'first-slide'){
-    document.getElementById('slider').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
+    document.getElementById('home-sec').style.cssText = 'border-color: #276ce1; background-color: #648bf0';
   } else {
-    document.getElementById('slider').style.cssText = 'border-color: 0; background-color: 0';
+    document.getElementById('home-sec').style.cssText = 'border-color: 0; background-color: 0';
   }
   document.getElementById(active).classList.add('hidden-left');
   document.getElementById(active).classList.remove('active-slide');
