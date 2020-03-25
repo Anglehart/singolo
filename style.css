@@ -28,7 +28,7 @@ main {
   padding-top: 95px;
 }
 .header-inner {
-  width: 1020px;
+  max-width: 1020px;
   height: 89px;
   padding: 0 40px;
   margin: auto;
@@ -82,11 +82,12 @@ nav li:first-child:before {
   transition: 0.5s;
 }
 .slider-inner {
-  width: 940px;
+  max-width: 940px;
   margin: auto;
   height: 100%;
   position: relative;
   overflow: hidden;
+  padding: 0 40px;
 }
 .vertical-phone {
   position: relative;
@@ -137,14 +138,17 @@ nav li:first-child:before {
   position: absolute;
   margin-top: -338px;
   margin-left: -119px;
+  width: auto;
 }
 .horizontal-phone .shadow {
   position: absolute;
   margin-top: -338px;
   margin-left: -118px;
+  width: auto;
 }
 .slider-inner img {
   display: block;
+  width: 100%;
 }
 #arrow-right img{
   transform: rotate(180deg);
@@ -160,10 +164,10 @@ nav li:first-child:before {
   opacity: 0.5;
 }
 #arrow-left {
-  margin-left: 2px;
+
 }
 #arrow-right {
-  right: 0px;
+  right: 40px;
 }
 #services-sec {
   width: 100%;
@@ -532,6 +536,7 @@ nav li a:hover {
 #second-slide{
   position: absolute;
   transition: 0.5s;
+  width: 100%;
 }
 #message-block {
   position: fixed;
@@ -569,4 +574,118 @@ nav li a:hover {
 }
 .active-slide {
   left: 0px;
+}
+
+@media (max-width: 768px) {
+  .vertical-phone {
+    left: -26px;
+    top: 40px;
+  }
+  .horizontal-phone {
+    left: -85px;
+    top: 39px;
+  }
+  #iphone-v {
+    width: 164px;
+  }
+  #iphone-h {
+    width: 164px;
+  }
+  .vertical-phone .shadow, .horizontal-phone .shadow {
+    margin-top: -255px;
+    margin-left: -91px;
+    width: 364px;
+  }
+
+  #phone-content-v {
+    margin-top: 50px;
+    margin-left: 12px;
+    height: 251px;
+    width: 142px;
+    background-size: 300%;
+    background-position: -10px -98px;
+  }
+  #phone-content-h {
+    margin-top: 103px;
+    margin-left: -45px;
+    height: 142px;
+    width: 251px;
+    background-size: 172%;
+    background-position: -89px -88px;
+  }
+  #home-sec {
+    height: 446px;
+  }
+  #arrow-left {
+    left: 3.7%;
+    top: 46.82%;
+  }
+  #arrow-right{
+    right: 3.63%;
+    top: 46.82%;
+  }
+}
+@media (max-width: 375px) {
+  .header-inner {
+    height: 65px;
+    justify-content: center;
+  }
+  .logo h1 {font-size: 21px;}
+  nav {
+    display: none;
+  }
+  main {
+    padding-top: 70px;
+  }
+  .vertical-phone {
+    left: -14px;
+    top: 20px;
+  }
+  .horizontal-phone {
+    left: -42px;
+    top: 20px;
+  }
+  #iphone-v {
+    width: 80px;
+  }
+  #iphone-h {
+    width: 80px;
+  }
+  .vertical-phone .shadow, .horizontal-phone .shadow {
+    margin-top: -121px;
+    margin-left: -38px;
+    width: 171px;
+  }
+
+  #phone-content-v {
+    margin-top: 24px;
+    margin-left: 6px;
+    height: 123px;
+    width: 69px;
+    background-size: 300%;
+    background-position: -5px -45px;
+  }
+  #phone-content-h {
+    margin-top: 51px;
+    margin-left: -22px;
+    height: 69px;
+    width: 123px;
+    background-size: 172%;
+    background-position: -45px -43px;
+  }
+  #home-sec {
+    height: 216px;
+  }
+  #arrow-right{
+    width: 14px;
+    height: 25px;
+    right: 10px;
+    top: 99px;
+  }
+  #arrow-left{
+    width: 14px;
+    height: 25px;
+    left: 10px;
+    top: 99px;
+  }
 }
