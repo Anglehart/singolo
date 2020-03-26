@@ -583,27 +583,7 @@ nav li a:hover {
 .active-slide {
   left: 0px;
 }
-@media (max-width: 1020px) {
-  #feedback-form {
-    width: 64%;
-  }
-  .feedback-contact {
-    margin-top: 0px;
-  }
-  .feedback-contact p {
-    margin-bottom: 9px;
-  }
-  .feedback-contact h3 {
-    margin-bottom: -13px;
-  }
-  fieldset {
-    margin-top: 0;
-  }
-  fieldset input, #form-project {
-    margin-bottom: 13px;
-  }
-}
-@media (max-width: 768px) {
+@media (max-width: 1019px) {
   .vertical-phone {
     left: -26px;
     top: 40px;
@@ -623,7 +603,6 @@ nav li a:hover {
     margin-left: -91px;
     width: 364px;
   }
-
   #phone-content-v {
     margin-top: 50px;
     margin-left: 12px;
@@ -656,12 +635,30 @@ nav li a:hover {
     padding-right: 35px;
   }
   .services-inner {
-    padding: 59px 40px 16px 40px;
+    padding: 40px 40px 16px 40px;
   }
   .services-item {
     display: flex;
     width: 300px;
     margin-bottom: 44px;
+  }
+  #feedback-form {
+    width: 64%;
+  }
+  .feedback-contact {
+    margin-top: 0px;
+  }
+  .feedback-contact p {
+    margin-bottom: 9px;
+  }
+  .feedback-contact h3 {
+    margin-bottom: -13px;
+  }
+  fieldset {
+    margin-top: 0;
+  }
+  fieldset input, #form-project {
+    margin-bottom: 13px;
   }
   .portfolio-inner > p {
     letter-spacing: 0.2px;
@@ -669,81 +666,12 @@ nav li a:hover {
   .portf-image {
     flex: 1 0 23%;
   }
-  .about-us-inner{
-    padding: 50px 40px 0 40px;
-  }
-  .team {
-    margin-top: 42px;
-  }
-  .person h3 {
-    margin-top: 4px;
-  }
-  .person p{
-    margin-top: 0;
-    margin-bottom: 3px;
-  }
 }
+
 @media (max-width: 767px) {
-  .header-inner {
-    height: 65px;
-    justify-content: center;
+  .about-us-inner{
+    padding: 30px 30px 0 30px;
   }
-  .logo h1 {font-size: 21px;}
-  main {
-    padding-top: 70px;
-  }
-  nav {
-    display: none;
-  }
-  #about-sec {
-    padding-bottom: 7px;
-  }
-  .person {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 32px;
-    max-width: 315px;
-  }
-  .team {
-    flex-direction: column;
-    margin-top: 25px;
-  }
-  .person h3 {
-    margin-top: 13px;
-  }
-  .form-wrapper {
-    flex-direction: column;
-  }
-  #feedback-form {
-    width: 100%;
-  }
-  .feedback-contact {
-    width: 100%;
-  }
-  #form-submit, #form-close{
-    width: 100%;
-    height: 48px;
-  }
-  .feedback-inner {
-    padding: 44px 30px 26px;
-  }
-  fieldset {
-    margin-top: 3px;
-  }
-  .feedback-contact h3 {
-    margin-top: 18px;
-  }
-  .feedback-contact a {
-    margin-bottom: 5px;
-  }
-  .copyright {
-    display: none;
-  }
-  .social {
-    margin: auto;
-  }
-}
-@media (max-width: 375px) {
   .vertical-phone {
     left: -14px;
     top: 20px;
@@ -763,7 +691,6 @@ nav li a:hover {
     margin-left: -38px;
     width: 171px;
   }
-
   #phone-content-v {
     margin-top: 24px;
     margin-left: 6px;
@@ -804,9 +731,77 @@ nav li a:hover {
   .services-wrapper {
     padding-right: 0;
     margin-top: 29px;
+    flex-direction: column;
   }
   .services-item {
+    margin: auto;
     margin-bottom: 20px;
+  }
+  .header-inner {
+    height: 65px;
+    justify-content: center;
+  }
+  .logo h1 {font-size: 21px;}
+  main {
+    padding-top: 70px;
+  }
+  nav {
+    display: none;
+  }
+  #about-sec {
+    padding-bottom: 7px;
+  }
+  .person {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 32px;
+    max-width: 315px;
+  }
+  .person p{
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+  .team {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  .person h3 {
+    margin-top: 13px;
+  }
+  .form-wrapper {
+    flex-direction: column;
+  }
+  #feedback-form {
+    width: 100%;
+  }
+  .feedback-contact {
+    width: 100%;
+  }
+  #form-submit, #form-close{
+    width: 100%;
+    height: 48px;
+  }
+  .feedback-inner {
+    padding: 44px 30px 29px;
+  }
+  fieldset {
+    margin-top: 3px;
+  }
+  .feedback-contact h3 {
+    margin-top: 18px;
+  }
+  .feedback-contact a {
+    margin-bottom: 5px;
+  }
+  .copyright {
+    display: none;
+  }
+  .social {
+    margin: auto;
+  }
+  .footer-inner .social a {
+    margin-right: 4px;
+    margin-left: 4px;
   }
   .portfolio-inner {
     padding: 43px 30px 0 30px;
@@ -815,7 +810,7 @@ nav li a:hover {
     margin: 19px -6.5px 30px;
   }
   .portf-image {
-    flex: 1 0 31%;
+    flex: 1 0 32%;
     margin: 6.5px;
   }
   .portf-image:nth-child(n+9){
@@ -824,5 +819,15 @@ nav li a:hover {
   .about-us-inner p {
     letter-spacing: 0.1px;
     padding:
+  }
+}
+@media (max-width: 375px) {
+  .services-item {
+    margin-left: 0;
+  }
+}
+@media (max-width: 350px) {
+  .services-inner {
+    padding: 27px 10px 0px 10px;
   }
 }
