@@ -44,6 +44,9 @@ main {
   top: -95px;
   visibility: hidden;
 }
+#burger-button{
+  display: none;
+}
 .logo h1{
   font-size: 25px;
   font-weight: 700;
@@ -520,7 +523,7 @@ footer {
   box-sizing: border-box;
 }
 .menu-active {
-  color: #f06c64;
+  color: #f06c64 !important;
 }
 nav li a {
   color: inherit;
@@ -582,6 +585,37 @@ nav li a:hover {
 }
 .active-slide {
   left: 0px;
+}
+#burger-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(45, 48, 58, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+#burger-inner {
+  height: 100vh;
+  width: 238px;
+  background: #2D303A;
+  box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+  padding: 25px 20px;
+}
+#burger-menu #menu {
+  flex-direction: column;
+}
+#burger-menu #menu{
+  margin: 172px 0px 0px 11px;
+}
+#burger-menu #menu li {
+  margin-bottom: 30px
+}
+
+#burger-menu #menu li a {
+  font-size: 23px;
+  text-decoration: none;
+  color: inherit;
+  transition: linear 0.2s;
 }
 @media (max-width: 1019px) {
   .vertical-phone {
@@ -667,8 +701,29 @@ nav li a:hover {
     flex: 1 0 23%;
   }
 }
-
+@media (min-width: 767px) {
+  #burger-wrapper {
+    display: none;
+  }
+  #logo {
+    display: block;
+  }
+}
 @media (max-width: 767px) {
+  #burger-button {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+  }
+  #burger-button-v {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    transform: rotate(90deg);
+  }
+  .header-inner {
+    padding: 0 20px;
+  }
   .about-us-inner{
     padding: 30px 30px 0 30px;
   }
@@ -739,9 +794,24 @@ nav li a:hover {
   }
   .header-inner {
     height: 65px;
-    justify-content: center;
+    justify-content: normal;
+    padding-top: 9px;
   }
-  .logo h1 {font-size: 21px;}
+  .logo {
+    margin: auto;
+    padding-left: 11px;
+  }
+  #logo-v {
+    margin-top: -15px;
+    margin-left: -55px;
+  }
+  #logo-v h1 {
+    text-align: center;
+    font-size: 21px;
+  }
+  .logo h1 {
+    font-size: 21px;
+  }
   main {
     padding-top: 70px;
   }
