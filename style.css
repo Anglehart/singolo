@@ -637,7 +637,7 @@ nav li a:hover {
   }
   .vertical-phone .shadow, .horizontal-phone .shadow {
     margin-top: -255px;
-    margin-left: -91px;
+    margin-left: -89px;
     width: 364px;
   }
   #phone-content-v {
@@ -703,6 +703,7 @@ nav li a:hover {
   .portf-image {
     flex: 1 0 23%;
   }
+
 }
 @media (min-width: 767px) {
   #burger-wrapper {
@@ -710,6 +711,9 @@ nav li a:hover {
   }
   #logo {
     display: block;
+  }
+  .logo-responsive{
+    position: inherit;
   }
 }
 @media (max-width: 767px) {
