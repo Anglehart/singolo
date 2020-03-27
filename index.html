@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Singolo</title>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -11,10 +12,26 @@
 <body>
   <header>
     <div class="header-inner">
-      <div class="logo">
+      <div id="burger-button">
+        <img src="assets/burger-menu.png" alt="">
+      </div>
+      <div id="burger-wrapper" class="disable">
+        <div id="burger-inner" >
+          <div id="burger-button-v">
+            <img src="assets/burger-menu.png" alt="">
+          </div>
+          <div class="logo" id="logo-v">
+            <h1>SINGOLO<span>*</span></h1>
+          </div>
+          <div id="burger-menu">
+
+          </div>
+        </div>
+      </div>
+      <div class="logo" id="logo">
         <h1>SINGOLO<span>*</span></h1>
       </div>
-      <nav>
+      <nav id="nav">
         <ul id="menu">
           <li><a href="#home" class="menu-active">HOME</a></li>
           <li><a href="#services">SERVICES</a></li>
@@ -183,7 +200,7 @@
             <input type="text" name="form-name" id="form-name" placeholder="Name (Required)" required>
             <input type="email" name="form-email" id="form-email" placeholder="Email (Required)" required>
             <input type="text" name="form-subject" id="form-subject" placeholder="Subject">
-            <textarea type="textarea" rows="8" cols="30" name="form-project" id="form-project" placeholder="Describe your project in detail..."></textarea>
+            <textarea type="textarea" rows="7" cols="30" name="form-project" id="form-project" placeholder="Describe your project in detail..."></textarea>
             <input type="submit" name="form-submit" id="form-submit" value="SEND" >
             </fieldset>
           </form>

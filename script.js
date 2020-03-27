@@ -9,6 +9,7 @@ const TAGS = document.getElementById('tags');
 const PIC_TYPE = ['all','wdesign', 'gdesign', 'artwork'];
 const RARROW = document.getElementById('arrow-right');
 const LARROW = document.getElementById('arrow-left');
+const BURGER = document.getElementById('burger-button');
 
 /*Добавление рамки к картинкам*/
 IMAGES.querySelectorAll('img').forEach(el => el.addEventListener('click', () => {
@@ -162,4 +163,22 @@ LARROW.addEventListener('click', () => {
     document.getElementById(hidden).classList.remove('hidden-right');
     document.getElementById(hidden).classList.add('active-slide')},
   100);
+})
+
+/*Всплывающее меню*/
+BURGER.addEventListener('click', () => {
+  document.getElementById("burger-wrapper").classList.remove("disable");
+  document.getElementById("logo").classList.add("disable");
+  document.getElementById("burger-menu").innerHTML = document.getElementById("nav").innerHTML;
+
+})
+document.getElementById("burger-wrapper").addEventListener('click', () => {
+  if (event.target.id == "burger-wrapper") {
+    document.getElementById("burger-wrapper").classList.add("disable");
+    document.getElementById("logo").classList.remove("disable");
+  };
+})
+document.getElementById("burger-button-v").addEventListener('click', () => {
+  document.getElementById("burger-wrapper").classList.add("disable");
+  document.getElementById("logo").classList.remove("disable");
 })
