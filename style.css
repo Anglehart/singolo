@@ -112,6 +112,7 @@ nav li:first-child:before {
   margin-left: 16px;
   z-index: 2;
   transition: 0.3s;
+  cursor: pointer;
 }
 #phone-content-h {
   position: absolute;
@@ -123,6 +124,7 @@ nav li:first-child:before {
   margin-left: -60px;
   z-index: 2;
   transition: 0.3s;
+  cursor: pointer;
 }
 #iphone-v {
   position: relative;
@@ -518,9 +520,7 @@ footer {
 
 /*Singolo DOM*/
 .image-active {
-  border: 5px solid #F06C64;
-  width: 100%;
-  box-sizing: border-box;
+  box-shadow: rgb(240, 108, 100) 0px 0px 0px 5px;
 }
 .menu-active {
   color: #f06c64 !important;
@@ -714,12 +714,17 @@ nav li a:hover {
     display: block;
     position: absolute;
     cursor: pointer;
+    transition: 0.2s;
   }
   #burger-button-v {
     display: block;
     position: absolute;
     cursor: pointer;
     transform: rotate(90deg);
+  }
+  .burger-active {
+    transform: rotate(90deg);
+    z-index: 10;
   }
   .header-inner {
     padding: 0 20px;
