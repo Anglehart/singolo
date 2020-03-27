@@ -183,12 +183,12 @@ LARROW.addEventListener('click', () => {
 function closeMenu() {
   BURGER.classList.remove("burger-active");
   document.getElementById("burger-wrapper").classList.add("disable");
-  document.getElementById("logo").classList.remove("disable");
+  document.getElementById("logo").classList.remove("logo-responsive");
 }
 function openMenu() {
   BURGER.classList.add("burger-active");
   document.getElementById("burger-wrapper").classList.remove("disable");
-  document.getElementById("logo").classList.add("disable");
+  document.getElementById("logo").classList.add("logo-responsive");
   //document.getElementById("burger-menu").innerHTML = document.getElementById("nav").innerHTML;
 }
 

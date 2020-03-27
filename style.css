@@ -56,6 +56,11 @@ main {
   font-weight: normal;
   color: #f06c64;
 }
+.logo-responsive {
+  position: absolute;
+  left: 58px;
+  z-index: 10;
+}
 nav {
   font-size: 12px;
 }
@@ -111,7 +116,6 @@ nav li:first-child:before {
   margin-top: 66px;
   margin-left: 16px;
   z-index: 2;
-  transition: 0.3s;
   cursor: pointer;
 }
 #phone-content-h {
@@ -123,7 +127,6 @@ nav li:first-child:before {
   margin-top: 137px;
   margin-left: -60px;
   z-index: 2;
-  transition: 0.3s;
   cursor: pointer;
 }
 #iphone-v {
@@ -894,6 +897,9 @@ nav li a:hover {
   .about-us-inner p {
     letter-spacing: 0.1px;
     padding:
+  }
+  .anchor {
+    top: -65px;
   }
 }
 @media (max-width: 375px) {
