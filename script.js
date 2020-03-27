@@ -55,9 +55,23 @@ document.getElementById('iphone-v').addEventListener('click', () => {
     PHONEV.classList.add('hidden');
   }
 })
+document.getElementById('phone-content-v').addEventListener('click', () => {
+  if (PHONEV.classList.contains('hidden')){
+    PHONEV.classList.remove('hidden');
+  } else {
+    PHONEV.classList.add('hidden');
+  }
+})
 
 /*Включиение и выключение горизонтального айфона*/
 document.getElementById('iphone-h').addEventListener('click', () => {
+  if (PHONEH.classList.contains('hidden')){
+    PHONEH.classList.remove('hidden');
+  } else {
+    PHONEH.classList.add('hidden');
+  }
+})
+document.getElementById('phone-content-h').addEventListener('click', () => {
   if (PHONEH.classList.contains('hidden')){
     PHONEH.classList.remove('hidden');
   } else {
@@ -166,19 +180,31 @@ LARROW.addEventListener('click', () => {
 })
 
 /*Всплывающее меню*/
-BURGER.addEventListener('click', () => {
-  document.getElementById("burger-wrapper").classList.remove("disable");
-  document.getElementById("logo").classList.add("disable");
-  document.getElementById("burger-menu").innerHTML = document.getElementById("nav").innerHTML;
-
-})
-document.getElementById("burger-wrapper").addEventListener('click', () => {
-  if (event.target.id == "burger-wrapper") {
-    document.getElementById("burger-wrapper").classList.add("disable");
-    document.getElementById("logo").classList.remove("disable");
-  };
-})
-document.getElementById("burger-button-v").addEventListener('click', () => {
+function closeMenu() {
+  BURGER.classList.remove("burger-active");
   document.getElementById("burger-wrapper").classList.add("disable");
-  document.getElementById("logo").classList.remove("disable");
+  document.getElementById("logo").classList.remove("logo-responsive");
+}
+function openMenu() {
+  BURGER.classList.add("burger-active");
+  document.getElementById("burger-wrapper").classList.remove("disable");
+  document.getElementById("logo").classList.add("logo-responsive");
+  //document.getElementById("burger-menu").innerHTML = document.getElementById("nav").innerHTML;
+}
+
+BURGER.addEventListener('click', () => {
+  if (BURGER.classList.contains("burger-active")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
 })
+
+document.getElementById("burger-wrapper").addEventListener('click', () => {
+  if (event.target.id == "burger-wrapper"){
+    closeMenu();
+  }
+})
+Array.from(document.getElementsByClassName("menu-link")).forEach(el => el.addEventListener('click', () => {
+  closeMenu();
+}));
