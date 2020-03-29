@@ -915,4 +915,7 @@ nav li a:hover {
   .services-inner {
     padding: 27px 10px 0px 10px;
   }
+  .tag {
+    padding: 0px 2px;
+  }
 }
